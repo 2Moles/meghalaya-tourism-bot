@@ -12,6 +12,14 @@ import json
 from datetime import datetime
 import time
 
+# Set page config FIRST before any other Streamlit operations
+st.set_page_config(
+    page_title="Meghalaya Tourism Bot",
+    page_icon="🏔️",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
 # Import custom modules
 from config import Config
 from vector_store import VectorStoreManager
@@ -299,13 +307,6 @@ def generate_and_display_response(user_input: str):
 
 def main():
     """Main application function."""
-    # Page configuration
-    st.set_page_config(
-        page_title="Meghalaya Tourism Bot",
-        page_icon="🏔️",
-        layout="wide",
-        initial_sidebar_state="expanded"
-    )
     
     # Setup custom CSS
     setup_custom_css()
