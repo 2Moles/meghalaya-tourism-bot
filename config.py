@@ -64,7 +64,7 @@ class Config:
         value = os.getenv(key, default)
         
         if required and not value:
-            raise ValueError(f"Required environment variable '{key}' is not set")
+            raise ValueError(f"Required environment variable '{key}' is not set. Please set it in Railway dashboard under Variables tab or in secrets.toml file.")
         
         return value
     
